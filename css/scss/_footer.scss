@@ -1,0 +1,77 @@
+@import '_variables';
+
+.Footer{
+    color:$Gray;
+    font-family: $Font;
+    padding-bottom: 60px;
+    &__Holder{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        &Logo{
+            background-image: url('../../images/logo_small.svg');
+            width: 39px;
+            height: 31px;
+        }
+        &Nav{
+            margin-top: 30px;
+            margin-bottom: 25px;
+            ul{
+                display: flex;
+                li{
+                    margin-right: 35px;
+                    a{
+                        color:$Gray;
+                    }
+                }
+                >li:last-child{
+                    margin-right: 0px;
+                }
+            }
+        }
+        &SM{
+            margin-bottom: 25px;
+            display: flex;
+            span{
+                position: relative;
+                display: block;
+                &:hover{
+                    opacity: 0.7;
+                }
+                a{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+            span.fb{
+                background-image: url('../../images/fb.svg');
+                width: 22px;
+                height: 22px;
+                margin-right: 15px;
+            }
+            span.yt{
+                background-image: url('../../images/yt.svg');
+                width: 30px;
+                height: 22px;
+            }
+        }
+        &Copy{
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:768px){
+    .Footer__HolderNav{
+        display: none;
+    }
+    .Footer__HolderSM{
+        margin-top: 40px;
+    }
+}

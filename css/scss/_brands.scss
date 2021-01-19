@@ -1,0 +1,60 @@
+@import '_variables';
+
+.Brands{
+    text-align:center;
+    color:$White;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 33px;
+        margin-bottom: 45px;
+    }
+    &__Listing{
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly; 
+        position: relative;
+        align-content: center;
+        padding-bottom: 65px;
+        border-bottom: 2px solid $Gray;
+        margin-bottom: 65px;
+        &Item{
+            background-size: contain;
+            background-position: center;
+            height: 83px;
+            background-repeat: no-repeat;
+            filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); 
+            filter: gray; 
+            -webkit-filter: grayscale(100%);
+            &:hover{
+                filter: none;
+                -webkit-filter: grayscale(0%);
+            }
+        }
+    }
+    .owl-carousel .owl-nav{
+        position: absolute;
+        width: 100%;
+        top: 23px;
+        button{
+            outline: none;
+            width: 12px;
+            height: 20px;
+            position: absolute;
+            &:hover{
+                background:transparent;
+                opacity: 0.7;
+            }
+        }
+        button.owl-prev{
+            left: -25px;
+        }
+        button.owl-next{
+            right: -25px;
+        }
+    }
+    .owl-dots{
+        display: none;
+    }
+}

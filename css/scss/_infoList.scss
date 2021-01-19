@@ -1,0 +1,57 @@
+@import '_variables';
+
+.Info__List{
+    justify-content: center;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 65px;
+    &Holder{
+        display: flex;
+        justify-content: space-evenly; 
+        width: 80%;
+        padding-bottom: 65px;
+        border-bottom: 2px solid $Gray;
+        &__Item{
+            color: $White;
+            font-family: "Noto Sans", sans-serif;
+            width: 23%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &Icon{
+                background-repeat: no-repeat;
+                margin-bottom: 10px;
+                width: 58px;
+                height: 69px;
+                background-position: bottom;
+            }
+            h2{
+                text-transform: uppercase;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+            article{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .Info__ListHolder{
+        flex-wrap: wrap;
+        &__Item{
+            flex-basis:50%;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width:500px){
+    .Info__ListHolder{
+        &__Item{
+            flex-basis:100%;
+        }
+    }
+}
